@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILES</title>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+        }
+        .text-center {
+            text-align: center;
+        }
+        header, main {
+            width: 80vw;
+            margin: 0 10vw;
+        }
+        form { 
+            width: 100%;
+        }
+        .input-body {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .input-body label {
+            width: 50px;
+            text-align: left;
+            padding: 5px 2px;
+            font-weight: bold;
+        }
+        .input-body input {
+            width: calc(100% - 50px);
+            border: 0;
+        }
+        .input-body input[type=file] {
+            border: 0;
+            padding: 5px 0;
+        }
+        .input-body input[type=submit] {
+            width: 100% !important;
+            border-radius: 7px;
+            padding: 5px 15px;
+        }
+        .input-body input[type=submit]:hover {
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow:5px 5px 10px 5px rgba(77, 71, 71, 0.2);
+        }
+        .imgs {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="text-center">파일업로드</h1>
+    </header>
+    <main>
+        <form>
+            <div class="input-body">
+                <label for="title">그림</label>
+                <input type="file" name="file" accept="image/*" autoComplete="off" />
+            </div>
+            <div class="input-body">
+                <input type="submit" value="전송" />
+            </div>
+        </form>
+        <div class="imgs">
+            <img src='https://avatars.githubusercontent.com/u/20333260?v=4' class="img"></img>
+            <img src='https://avatars.githubusercontent.com/u/20333260?v=4' class="img"></img>
+            <img src='https://avatars.githubusercontent.com/u/20333260?v=4' class="img"></img>
+            <img src='https://avatars.githubusercontent.com/u/20333260?v=4' class="img"></img>
+            <img src='https://avatars.githubusercontent.com/u/20333260?v=4' class="img"></img>
+        </div>
+    </main>
+</body>
+</html>
